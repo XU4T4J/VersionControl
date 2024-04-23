@@ -32,6 +32,7 @@
             lblFullName = new Label();
             txtFullName = new TextBox();
             btnAdd = new Button();
+            btnWriteFile = new Button();
             SuspendLayout();
             // 
             // listUsers
@@ -71,11 +72,23 @@
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
             // 
+            // btnWriteFile
+            // 
+            btnWriteFile.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWriteFile.Location = new Point(273, 125);
+            btnWriteFile.Name = "btnWriteFile";
+            btnWriteFile.Size = new Size(260, 35);
+            btnWriteFile.TabIndex = 6;
+            btnWriteFile.Text = "button2";
+            btnWriteFile.UseVisualStyleBackColor = true;
+            btnWriteFile.Click += btnWriteFile_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(545, 313);
+            Controls.Add(btnWriteFile);
             Controls.Add(btnAdd);
             Controls.Add(txtFullName);
             Controls.Add(lblFullName);
@@ -92,5 +105,6 @@
         private Label lblFullName;
         private TextBox txtFullName;
         private Button btnAdd;
+        private Button btnWriteFile;
     }
 }

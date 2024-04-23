@@ -10,6 +10,7 @@ namespace UserMaintenance
             InitializeComponent();
             lblFullName.Text=Resource1.FullName;
             btnAdd.Text=Resource1.Add;
+            btnWriteFile.Text=Resource1.WriteFile;
 
             //listbox1
             listUsers.DataSource=users;
@@ -24,6 +25,19 @@ namespace UserMaintenance
                 FullName = txtFullName.Text,
             };
             users.Add(u);
+        }
+
+        private void btnWriteFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.ShowDialog(this);
+            using StreamWriter sw = new StreamWriter(saveFileDialog.FileName);
+            foreach (User user in users)
+            {
+                sw.WriteLine("ID: {0} Név: {1}", user.ID, user.FullName);
+            }
+            
+            
         }
     }
 }
