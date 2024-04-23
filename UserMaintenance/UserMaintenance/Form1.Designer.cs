@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             listUsers = new ListBox();
-            lblLastName = new Label();
-            lblFirstName = new Label();
-            txtLastName = new TextBox();
-            txtFirstName = new TextBox();
+            lblFullName = new Label();
+            txtFullName = new TextBox();
             btnAdd = new Button();
             SuspendLayout();
             // 
@@ -45,44 +43,27 @@
             listUsers.Size = new Size(213, 289);
             listUsers.TabIndex = 0;
             // 
-            // lblLastName
+            // lblFullName
             // 
-            lblLastName.AutoSize = true;
-            lblLastName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLastName.Location = new Point(273, 34);
-            lblLastName.Name = "lblLastName";
-            lblLastName.Size = new Size(52, 21);
-            lblLastName.TabIndex = 1;
-            lblLastName.Text = "label1";
+            lblFullName.AutoSize = true;
+            lblFullName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFullName.Location = new Point(273, 34);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(52, 21);
+            lblFullName.TabIndex = 1;
+            lblFullName.Text = "label1";
             // 
-            // lblFirstName
+            // txtFullName
             // 
-            lblFirstName.AutoSize = true;
-            lblFirstName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFirstName.Location = new Point(273, 63);
-            lblFirstName.Name = "lblFirstName";
-            lblFirstName.Size = new Size(52, 21);
-            lblFirstName.TabIndex = 2;
-            lblFirstName.Text = "label2";
-            // 
-            // txtLastName
-            // 
-            txtLastName.Location = new Point(359, 32);
-            txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(174, 23);
-            txtLastName.TabIndex = 3;
-            // 
-            // txtFirstName
-            // 
-            txtFirstName.Location = new Point(359, 61);
-            txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(174, 23);
-            txtFirstName.TabIndex = 4;
+            txtFullName.Location = new Point(359, 32);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(174, 23);
+            txtFullName.TabIndex = 3;
             // 
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAdd.Location = new Point(273, 100);
+            btnAdd.Location = new Point(273, 72);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(260, 35);
             btnAdd.TabIndex = 5;
@@ -96,10 +77,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(545, 313);
             Controls.Add(btnAdd);
-            Controls.Add(txtFirstName);
-            Controls.Add(txtLastName);
-            Controls.Add(lblFirstName);
-            Controls.Add(lblLastName);
+            Controls.Add(txtFullName);
+            Controls.Add(lblFullName);
             Controls.Add(listUsers);
             Name = "Form1";
             Text = "Form1";
@@ -110,10 +89,8 @@
         #endregion
 
         private ListBox listUsers;
-        private Label lblLastName;
-        private Label lblFirstName;
-        private TextBox txtLastName;
-        private TextBox txtFirstName;
+        private Label lblFullName;
+        private TextBox txtFullName;
         private Button btnAdd;
     }
 }
