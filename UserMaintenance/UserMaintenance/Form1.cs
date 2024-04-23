@@ -11,6 +11,7 @@ namespace UserMaintenance
             lblFullName.Text=Resource1.FullName;
             btnAdd.Text=Resource1.Add;
             btnWriteFile.Text=Resource1.WriteFile;
+            btnDelete.Text = Resource1.Delete;
 
             //listbox1
             listUsers.DataSource=users;
@@ -36,8 +37,17 @@ namespace UserMaintenance
             {
                 sw.WriteLine("ID: {0} Név: {1}", user.ID, user.FullName);
             }
-            
-            
+
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            User selectedUser = (User)listUsers.SelectedItem;
+            if (selectedUser != null)
+            {
+                users.Remove(selectedUser);
+            }
         }
     }
 }

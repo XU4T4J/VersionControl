@@ -33,6 +33,7 @@
             txtFullName = new TextBox();
             btnAdd = new Button();
             btnWriteFile = new Button();
+            btnDelete = new Button();
             SuspendLayout();
             // 
             // listUsers
@@ -83,11 +84,23 @@
             btnWriteFile.UseVisualStyleBackColor = true;
             btnWriteFile.Click += btnWriteFile_Click;
             // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDelete.Location = new Point(273, 179);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(260, 35);
+            btnDelete.TabIndex = 7;
+            btnDelete.Text = "button2";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(545, 313);
+            Controls.Add(btnDelete);
             Controls.Add(btnWriteFile);
             Controls.Add(btnAdd);
             Controls.Add(txtFullName);
@@ -106,5 +119,6 @@
         private TextBox txtFullName;
         private Button btnAdd;
         private Button btnWriteFile;
+        private Button btnDelete;
     }
 }
