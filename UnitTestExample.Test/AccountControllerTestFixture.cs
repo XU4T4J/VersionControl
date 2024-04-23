@@ -21,8 +21,7 @@ namespace UnitTestExample.Test
 
             //Assert
             Assert.That(actualResult, Is.EqualTo(expectedResult));
-            //adasdasdasd
-
+            
 
         }
     }
